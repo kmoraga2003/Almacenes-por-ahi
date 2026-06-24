@@ -1,2 +1,5 @@
 <Solution>
+  <Project Path="AlmacenesPorAhi.App/AlmacenesPorAhi.App.csproj" />
+  <Project Path="AlmacenesPorAhi.Core/AlmacenesPorAhi.Core.csproj" />
+  <Project Path="AlmacenesPorAhi.Tests/AlmacenesPorAhi.Tests.csproj" />
 </Solution>

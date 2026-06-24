@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlmacenesPorAhi.App.Views.LoginPage"
+             Title="Login">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20" VerticalOptions="Center">
+            <Label Text="Almacenes Por Ahí"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="Ingrese con las credenciales definidas en el código."
+                   HorizontalOptions="Center"
+                   TextColor="#64748B" />
+
+            <Frame>
+                <VerticalStackLayout Spacing="14">
+                    <Label Text="Usuario" FontAttributes="Bold" />
+                    <Entry x:Name="UsernameEntry" Placeholder="empleado" />
+                    <Label Text="Contraseña" FontAttributes="Bold" />
+                    <Entry x:Name="PasswordEntry" Placeholder="1234" IsPassword="True" />
+                    <Button Text="Ingresar" Clicked="OnLoginClicked" />
+                    <Label x:Name="StatusLabel" TextColor="{StaticResource DangerColor}" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

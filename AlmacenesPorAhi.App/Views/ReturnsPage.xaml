@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlmacenesPorAhi.App.Views.ReturnsPage"
+             Title="Devoluciones">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="18">
+            <Frame>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Gestión de Devoluciones" FontSize="20" FontAttributes="Bold" />
+                    <Picker Title="Seleccione un producto"
+                            ItemsSource="{Binding Products}"
+                            ItemDisplayBinding="{Binding Name}"
+                            SelectedItem="{Binding SelectedProduct}" />
+                    <Entry Placeholder="Cantidad devuelta" Keyboard="Numeric" Text="{Binding Quantity}" />
+                    <Editor Placeholder="Motivo de la devolución"
+                            AutoSize="TextChanges"
+                            HeightRequest="100"
+                            Text="{Binding Reason}" />
+                    <Button Text="Registrar Devolución" Command="{Binding RegisterReturnCommand}" BackgroundColor="{StaticResource AccentColor}" />
+                    <Label Text="{Binding StatusMessage}" TextColor="{StaticResource AccentColor}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Historial de devoluciones" FontSize="20" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding ReturnHistory}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0,0,0,10">
+                            <VerticalStackLayout Spacing="4">
+                                <Label Text="{Binding ProductName}" FontAttributes="Bold" />
+                                <Label Text="{Binding Quantity, StringFormat='Cantidad: {0}'}" />
+                                <Label Text="{Binding Reason, StringFormat='Motivo: {0}'}" />
+                                <Label Text="{Binding Date, StringFormat='Fecha: {0:dd/MM/yyyy HH:mm}'}" TextColor="#64748B" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

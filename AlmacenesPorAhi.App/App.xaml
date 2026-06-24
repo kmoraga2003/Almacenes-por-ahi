@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AlmacenesPorAhi.App.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#4F46E5</Color>
+            <Color x:Key="SecondaryColor">#EEF2FF</Color>
+            <Color x:Key="AccentColor">#0F766E</Color>
+            <Color x:Key="DangerColor">#DC2626</Color>
+            <Color x:Key="TextColor">#1F2937</Color>
+            <Color x:Key="PageBackground">#F8FAFC</Color>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource PageBackground}" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="CornerRadius" Value="14" />
+                <Setter Property="Padding" Value="14,10" />
+            </Style>
+
+            <Style TargetType="Frame">
+                <Setter Property="CornerRadius" Value="18" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="BorderColor" Value="#E2E8F0" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
